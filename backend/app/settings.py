@@ -1,16 +1,13 @@
 import functools
-import logging
 import os
-import sys
 from functools import lru_cache
-from pathlib import Path
-from tempfile import gettempdir
 
 import pytz
 from pydantic_settings import BaseSettings
 from yarl import URL
 
 from app import constants
+
 
 class Settings(BaseSettings):
     """
@@ -36,6 +33,10 @@ class Settings(BaseSettings):
     db_host: str
     db_port: int
     db_echo: bool = False
+
+    # google
+    google_client_id: str
+    google_client_secret: str
 
     # sentry
     sentry_dsn: str = ""
