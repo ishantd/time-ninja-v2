@@ -1,0 +1,15 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/time
+ExecStart=/home/ubuntu/time/env/bin/python -m app
+EnvironmentFile=/home/ubuntu/time/.env
+StandardOutput=file:/var/log/time/time.log
+StandardError=file:/var/log/time/time.err.log
+
+[Install]
+WantedBy=multi-user.target

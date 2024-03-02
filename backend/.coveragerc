@@ -1,0 +1,12 @@
+[run]
+omit =
+    app/tests/*
+    app/migrations/*
+    app/api/v1/**/__init__.py
+    app/api/v1/**/models.py
+    app/api/v1/**/schemas.py
+    app/api/v1/sense/*
+    app/api/v1/**/scripts.py
+    app/api/v1/openai/*
+    app/api/v1/changehealthcare/openapi_models/*
+    app/api/v1/plaid/plaid_openapi.py

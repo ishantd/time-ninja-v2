@@ -1,0 +1,13 @@
+[tool.ruff]
+
+# exclude scripts folder
+exclude = [".git", "*script*", "app/migrations"]
+
+# ignore some errors for now - goal is to get these down to 0!
+# E712 - comparison to False should be 'if cond is False:' or 'if not cond:'
+# E711 - comparison to None should be 'if cond is None:'
+# E501 - line too long (82 > 79 characters)
+ignore = ["E712", "E711", "E501"]
+
+# On top of the default `select` (`E`, `F`), enable T (flake8-print)
+extend-select = ['T']
