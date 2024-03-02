@@ -42,7 +42,7 @@ repos:
   - id: flake8
     # configuration file for flake8 in /.flake8
     # See https://flake8.pycqa.org/en/latest/user/configuration.html
-    args: [--config=.flake8]
+    args: [--config=backend/.flake8]
 
 - repo: local
   hooks:

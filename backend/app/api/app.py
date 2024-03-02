@@ -12,8 +12,6 @@ import app.constants as constants
 from app.api.v1.router import api_router
 from app.database import load_all_models
 from app.settings import settings
-from app.utils.algolia import init_algolia_indexes
-from app.utils.temporal import get_client
 
 
 def filter_transactions(event, hint):
@@ -120,7 +118,7 @@ def register_startup_event(app: FastAPI) -> Callable[[], Awaitable[None]]:
     async def _startup() -> None:  # noqa: WPS430
         # TODO: check if db session is set up and active
         try:
-            await get_client()
+            pass
         except Exception:
             pass
 
